@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Caslon Display', serif;
+}
+:root{
+    --pink: #FF0066;
+    --pink__hover: #ff5b9d;
+    --color__dark: #2e2e31;
+    --color__text: #757575;
+    --color__white: #ffffff;
+    --backgroun__color: #f6f7fb;
+    --color__border: #bdbdbd;
+    --color__text__two: #686868;
+}
+/* _____ CLASES PARA UNIFICAR ESTILOS _____*/
+.white{
+    color: var(--color__white);
+}
+.upper{
+    text-transform: uppercase;
+}
+/* mismo font size para los h2 de about y de projects*/
+.skills__h2, .projects__h2{
+    font-size: 2.6rem;
+}
+/* estos estilos son para las p que estan debajo de los h2 (en mis conocimientos y mis proyectos), comparten el mismo estilo*/
+.skills__p, .projects__p{
+    font-size: 1.2rem;
+    color: var(--color__text);
+    padding: 50px 0;
+}
+/*estilos solo para el HTML : page__in__contruction, lo hice sencillo, intente solo usar boostrap porque no queria tener que agregar mas class o id para este nuevo html, mas bien use las clases de boostrap para cambiar estilos, ya que he trabajado en equipo haciendo pagina web y usamos sass para proyectos grandes con mas de 1 html :)!  */
+.body__container{
+    text-align: center;
+}
+.alert-danger{
+    color: var(--pink);
+}
+.return__container{
+    display: flex;
+    flex-direction: column;
+    padding: 35px 440px;
+}
+.return__container i{
+    font-size: 2rem;
+    color: var(--pink);
+    margin-bottom: 30px;
+}
+.btn-success{
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+    background-color: var(--pink);
+    border: none;
+}
+.btn-success:hover{
+    background-color: var(--pink__hover);
+}
+.btn:hover a{
+    color: var(--color__dark);
+}
+progress{
+    background-color: var(--backgroun__color);
+    border-radius: 30px;
+    border-color: var(--color__border);
+}
+/* _________HEADER_________ */
+header{
+    z-index: 1;
+}
+/* navbar and whatsapp */ 
+/* uso las clases del navbar de header, el navbar del footer y el boton de whatsapp con el mismo estilos porque para movil se esconden y para no escribir triple codigo los escondo a los tres en esta misma linea de codigo :)! */
+/* whatsapp*/ /*escondi el boton de whatsapp para que se no se vea recargada la web, al momento que la visualicen en mobile*/
+.navbar, .navbar__footer, .whatsapp{
+    display: none;
+}
+/* ##Todos los ancla## */
+a{
+    text-decoration: none;
+}
+/* _________MAIN________ */
+/* ABOUT MY */
+#about{
+    padding-top: 100px;
+    text-align: center;
+}
+/* BOX 1 | ABOUT MY */
+#about__hello{
+    color: var(--color__dark);
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+h1{
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 2.6rem;
+    margin: 10px 0 20px;
+    color: var(--pink);
+}
+#about__quiensoy{
+    font-size: 1rem;
+    color: var(--color__text);
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+/* ABOUT MY boton para ir a la seccion proyectos */
+.about__btn{
+    background-color: var(--pink);
+    padding: 13px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    border: none;
+    margin: 40px 0 20px;
+}  
+.about__btn:active{
+    background-color: var(--pink__hover);
+    border: 3px var(--color__border) solid;
+}
+/* BOX 2 | ABOUT MY */
+#girl img{
+    width: 320px;
+}
+/* MIS CONOCIMIENTOS */
+#skills{
+    background-color: var(--backgroun__color);
+    padding: 80px 40px;
+    text-align: center;
+}
+.skills__container{
+    padding: 0 20px;
+}
+/* skills CARD */
+.skills__container--card{
+    padding: 40px 60px;
+    background-color: var(--color__white);
+    border-radius: 10px;
+    border: 1px var(--color__border) solid;
+    margin-bottom: 15px;
+}
+.skills__container--card img + figcaption{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color__dark);
+}
+/* CITA DEL PRINCIPITO */
+blockquote{
+    background-color: var(--pink);
+    text-align: center;
+    padding: 100px 20px;
+}
+.fa-quote-right{
+    font-size: 8rem;
+}
+blockquote p{
+    margin: 15px 0 40px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+blockquote h3{
+    font-style: oblique;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+blockquote img{
+    width: 80%
+}
+/* MIS PROYECTOS */
+#projects{
+    padding: 80px 40px;
+    text-align: center;
+}
+/* project CARD */
+.projects__container--card{
+    border-radius: 10px;
+    border: 1px var(--color__border) solid;
+    margin-bottom: 20px;
+}
+.projects__container--card img{
+    width: 250px;
+    height: 220px;
+}
+.card__icon{
+    margin: 25px 0;
+    height: 180px;
+}
+.projects__container--card img + figcaption{
+    color: var(--color__text__two);
+    padding-bottom: 4px;
+    margin: 0 50px 20px;
+    border-bottom: 1px var(--color__text__two) solid;
+}
+/* CONTACTO */
+#contact h3{
+    font-size: 2.6rem;
+    margin-left: 20px;
+}
+.contact__container--box{
+    padding-bottom: 20px;
+}
+#contact h3 + p{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: var(--color__text__two);
+    margin: 30px 20px;
+}
+/* contactame BOX */
+.contact__container--box--card figure{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+.contact__container--box--card i + figcaption{
+    color: var(--color__text__two);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 10px;
+}
+.contact__container--box--card i{
+    color: var(--pink);
+    font-size: 1.5rem;
+    margin: 8px;
+}
+/* escribeme BOX */
+form{
+    margin: 25px 20px;
+}
+fieldset{
+    border: none;
+}
+.form__date{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+fieldset input, fieldset textarea{
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--backgroun__color);
+    font-size: 1.2rem;
+    border: 2px var(--pink) solid;
+    outline: transparent;
+}
+textarea{
+    resize: none;
+}
+#email, #mensaje, .form__date input{
+    width: 100%;
+}
+/*boton enviar*/
+fieldset button{
+    background-color: var(--pink);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    width: 120px;
+    margin-top: 30px;
+}
+fieldset button:active{
+    background-color: var(--pink__hover);
+    color: var(--color__dark);
+    outline: 0;
+}
+/* _________FOOTER________ */
+footer{
+    background-color: var(--pink);
+    padding: 50px 0;
+}
+footer h4{
+    text-align: center;
+    margin-top: 35px;
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+h4 i{
+    color: #e8fc03;
+}
+/*  redes sociales  */
+#footer__socialmedia{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 60px;
+}
+#footer__socialmedia figure i{
+    padding: 13px;
+    background-color: var(--backgroun__color);
+    color: var(--pink);
+    border-radius: 100%;
+    border: 1px var(--pink) solid;
+}
+/* media queries 760px para tablet */
+@media (min-width: 768px){
+    /* _________HEADER_________ */
+    /* hover para todos los botones */ /* los coloque a partir de este break point para que en mobile no se vean transiciones bruscas, soloamente a partir de tablet :)! */
+    .btn__hover:hover{
+    transition-property: all;
+    background-color: var(--pink__hover);
+    transition-duration: 1s;
+    }
+    /* _________MAIN_________ */
+    /* whatsapp */
+    .whatsapp{
+        display: initial;
+        width: 50px;
+        background-color: var(--color__white);
+        position:fixed;
+        right: 12px;
+        z-index: 1;
+        bottom: 30px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    /* BOX 1 | ABOUT MY */
+    #about__hello{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    #about__quiensoy{
+        font-size: 1.2rem;
+    }
+    /* BOX 2 | ABOUT MY */
+    #girl img{
+        width: 450px;
+    }
+    /*plus, uno los mismos estilos para acomodar las cajitas de mis conocimientos y mis proyectos*/
+    /* MIS CONOCIMIENTOS *___/  /____* MIS PROYECTOS */  
+    .skills__container, .projects__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    /* MIS CONOCIMIENTOS */
+    .skills__container--card{
+        width: 40%;
+        box-shadow: 3px 5px 5px -4px var(--color__dark);
+    }
+    /* MIS PROYECTOS */
+    .projects__container--card{
+        width: 40%;
+        box-shadow: -3px -2px 8px -3px var(--color__dark)
+    }
+    .card__icon{
+        height: 170px;
+    }
+    .projects__container--card img + figcaption{
+        border-bottom: none;
+    }
+    /* CITA DEL PRINCIPITO */
+    blockquote img{
+        width: 50%;
+    }
+    blockquote p{
+    font-size: 1.5rem;
+    margin: 15px 40px 40px;
+    }
+    blockquote h3{
+        font-size: 2rem;
+    }
+    /* CONTACTO */
+    /* CONTAINER BOX*/
+    .contact__container{
+        padding: 20px;
+    }
+    #contact h3 + p{
+        margin-right: 300px;
+    }
+    .contact__container--box{
+        padding-bottom: 40px;
+    }
+    /* contactame BOX */
+    .contact__container--box--card{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .contact__container--box--card a{
+        width: 50%;
+    }
+    .contact__container--box--card a figcaption{
+        margin: 20px 0;
+    }
+    .contact__container--box--card a:hover figcaption{
+        color: var(--pink);
+    }
+    .contact__container--box--card i{
+        padding: 10px;
+    }
+    .contact__container--box--card a:hover figure i{
+        background-color: var(--pink);
+        border-radius: 100%;
+        color: var(--color__white);
+        transition-property: all;
+        transition-duration: 1.3s;
+    }
+    /* escribeme BOX */
+    .form__date{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    fieldset input, fieldset textarea{
+        border: none;
+    }
+    fieldset input:focus, fieldset textarea:focus{
+        outline: solid var(--pink) 2px; 
+    }
+    /* _________FOOTER________ */
+    .navbar__footer{
+    display: initial;
+    }
+    .navbar__footer .navbar__footer--ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 160px;
+    }
+    .navbar__footer--li{
+        list-style: none;
+    }
+    /*  redes sociales */
+    #footer__socialmedia{
+    padding: 0 220px;
+    }
+/* media queries 1200px para desktop */
+@media (min-width: 1200px){
+    body{
+        padding-top: 50px;   
+    }
+    /* _________HEADER_________ */
+    header{
+        background-color: var(--color__white);
+        width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+        left: 0; /* Posicionamos la cabecera al lado izquierdo */
+        top: 0; /* Posicionamos la cabecera pegada arriba */
+        position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+        box-shadow: 20px -60px 60px 40px rgba(0,0,0,0.50);
+    }
+    header .navbar{
+        display: initial;
+    }
+    .navbar .navbar__ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar__ul .navbar__ul--li{
+        list-style: none;
+        margin: 38px 30px 40px 0;
+    }
+    .navbar__ul--item{
+        color: var(--color__dark);
+    }
+    .navbar__ul--item:hover{
+    color: var(--pink);
+    }
+    /* botton para ir a la seccion contacto */
+    .navbar__btn{
+        background-color: var(--pink);
+        padding: 10px 30px;
+        border-radius: 30px;
+        margin-right: 120px;
+        }
+    /*_________MAIN________*/
+    /* whatsapp */
+    .whatsapp{
+        width: 55px;
+        position:fixed;
+        right: 35px;
+        bottom: 30px;
+        height: 55px;
+     }
+    /* ABOUT MY */
+    #about{
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        padding-left: 90px;
+    }
+    /* BOX 1 | ABOUT MY */
+    #about article{
+        width: 60%;
+    }
+    #about__hello{
+        font-size: 2.2rem;
+        margin: 140px 0 20px;
+    }
+    h1{
+        font-size: 3.2rem;
+        margin-top: 10px;
+    }
+    #about__quiensoy{
+        padding: 0;
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+    /* ABOUT MY boton para ir a la seccion proyectos */
+    .about__btn{
+        margin-top: 30px;
+        -webkit-animation: tracking-in-expand-fwd-top 0.8s ease-out both;
+	     animation: tracking-in-expand-fwd-top 0.8s ease-out both;
+    }      
+    @-webkit-keyframes tracking-in-expand-fwd-top {
+        0% {
+          letter-spacing: 0.2em;
+          -webkit-transform: translateZ(-700px) translateY(-500px);
+          transform: translateZ(-700px) translateY(-500px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0) translateY(0);
+          transform: translateZ(0) translateY(0);
+          opacity: 1;
+        }
+      }
+    @keyframes tracking-in-expand-fwd-top {
+        0%{
+          letter-spacing: 0.2em;
+          -webkit-transform: translateZ(-700px) translateY(-500px);
+          transform: translateZ(-700px) translateY(-500px);
+          opacity: 0;
+        }
+        40%{
+          opacity: 0.6;
+        }
+        100%{
+          -webkit-transform: translateZ(0) translateY(0);
+           transform: translateZ(0) translateY(0);
+           opacity: 1;
+        }
+     }
+    .about__btn:hover{
+         box-shadow: 0 10px 10px 0 var(--color__border);
+         transition: all 0.5s;
+    }
+    /* BOX 2 | ABOUT MY */
+    #girl{
+        width: 40%;
+        margin-top: 40px;
+        margin-right: 100px;
+    }
+    #girl img{
+        width: 400px;
+    }
+    /* MIS CONOCIMIENTOS *___/  /____* MIS PROYECTOS */  
+    /*plus, mismo padding mas grande para mis conocimientos y mis proyectos*/
+    #skills, #projects{
+        padding-top: 180px;
+    }
+    /* MIS CONOCIMIENTOS */
+    .skills__container{
+        padding: 0 200px;
+    }
+    .skills__container--card{
+        padding: 40px 50px;
+        width: 30%;
+        opacity: 0.8;
+    }
+    .skills__container--card:hover{
+        transition-property: all;
+        transition-duration: 1s;
+        border-color: var(--pink);
+        opacity: 1;
+    }
+    .skills__container--card:hover figcaption{
+        color: var(--pink);
+    }
+    .skills__container--card img{
+        width: 60%;
+    }
+    /*MIS PROYECTOS*/
+    .projects__container{
+        padding: 0 100px;
+    }
+    .projects__container--card{
+        width: 30%;
+        box-shadow: none;
+    }
+    .projects__container--card:hover{
+        transition-property: all;
+        transition-duration: 1s;
+        box-shadow: -5px 3px 5px -4px rgba(255,91,157,1);
+        border-color: var(--pink);
+    }
+    .projects__container .projects__container--card:nth-child(2):hover{
+        box-shadow: -5px 3px 5px -4px rgb(234,200,40);
+        border-color: rgb(234,200,40);
+    }
+    .projects__container .projects__container--card:nth-child(3):hover{
+        box-shadow: -5px 3px 5px -4px rgb(241,108,3);
+        border-color: rgb(241,108,3);
+    }
+    .projects__container--card img + figcaption{
+        position: relative;
+    }
+    .projects__container--card img + figcaption:before{
+        content: "";
+        background-color: var(--color__text__two);
+        width: 0;
+        display: block;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all .3s;
+    }
+    .projects__container--card a:hover figcaption::before{
+        width: 100%;
+    }
+    /*PLUS - SIRVE PARA EL TITULO Y TEXTO DE LA SECCION MIS CONOCIMIENTOS Y LA SECCION MIS PROYECTOS*/
+    #skills h2, #projects h2{
+         font-size: 3rem;
+    }
+    /* CITA DEL PRINCIPITO */
+    blockquote p{
+       padding: 0 300px;
+    }
+    blockquote p + h3{
+        font-size: 2.2rem;
+    }
+    blockquote figure img{
+        width: 25%;
+    }
+    /* CONTACTAME */
+    #contact{
+        background-color: var(--backgroun__color);
+        padding: 180px 120px;
+    }
+    /* CONTAINER BOX */
+    .contact__container{
+        border-radius: 10px;
+        border: 1px #bdbdbd solid;
+        background-color: var(--color__white);
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 40px 40px;
+        width: 100%;
+    }
+    #contact h3 + p{
+        margin-right: 80px;
+    }
+    #contact h3{
+        font-size: 3rem;
+    }
+    /* contactame BOX */
+    .contact__container--box--card{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact__container--box--card figure{
+        margin-left: 10px;
+    }
+    /* escribeme BOX */
+    .form__date article{
+        width: 48%;
+    }
+    /* _________FOOTER________ */
+    .navbar__footer .navbar__footer--ul{
+        padding: 30px 450px;
+    }
+    #footer__socialmedia{
+        padding: 0 560px;
+    }
+    #footer__socialmedia a:hover i{
+        border: 1px #ffffff solid;
+        background-color: var(--pink);
+        color: var(--color__white);
+    }
+}
