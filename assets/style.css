@@ -197,6 +197,9 @@ main{
 .proyectos__row article>img{
     width: 80%;
 }
+.green:hover{
+    color: #B5F1CC;
+}
 .main__contacto{
     height: 85vh;
     width: 98%;
